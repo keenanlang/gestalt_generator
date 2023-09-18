@@ -2,7 +2,7 @@
 #include widgets.yml
 
 Form: !Form
-    styleSheet: !string "QWidget#Form {background: rgba(187, 187, 187, 255);}"
+    <<: *form_default
     
     margins: 5x5x5x5
 

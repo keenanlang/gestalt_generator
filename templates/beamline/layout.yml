@@ -8,7 +8,7 @@ link_display: &link_display
 
 
 Form: !Form
-    styleSheet: !string "QWidget#Form {background: rgba(187, 187, 187, 255);}\nQPushButton::menu-indicator {image: url(none.png); width: 0}"
+    <<: *form_default
     
     margins: 5x5x5x5
     
@@ -173,6 +173,7 @@ StretchOut: !hstretch
         text: "Beamline {SECTOR}-{TYPE}"
         alignment: Qt::AlignLeft|Qt::AlignVCenter
 
+        
 Centering: !hcenter
     OPSElements: !group
         geometry: 0x7 x 0x0
