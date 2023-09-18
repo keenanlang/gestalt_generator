@@ -1,7 +1,8 @@
-#! /usr/bin/env python3
+#! /APSshare/anaconda3/x86_64/bin/python3
 
 import os
 import tempfile
+import traceback
 
 from templates import *
 from gestalt import *
@@ -75,6 +76,7 @@ class UI(QMainWindow):
 			self.Status.setText("File Generated")
 			
 		except Exception as e:
+			traceback.print_exc()
 			QMessageBox.warning(self, "Error Occured", str(e))
 		
 		
